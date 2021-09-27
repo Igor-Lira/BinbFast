@@ -1,3 +1,38 @@
+module.exports.sub = [
+    1440726301, // Common - Be (Intro)
+    1455130481, // 2pac - runnin
+    1530984391, // Lazy Jay - 212
+    970861802, // Mike G - Loaded
+    281812954, // Run DMC - Rock box
+    1253107501, // Pie - Future
+    868691292, // Nas - One mic
+    1536669653, // Outkast - Rosa Parks
+    1440765176, // Method Man - Say
+    1192538686, // T-shirt - Migos
+    1440742912, // Kanye West - Monster
+    1451142480, // Kanye West - Flashing Lights
+    1440848099, // Kanye West - Niggas in Paris
+    859844934, // Gorillaz - Stylo
+    1418026017, // Quavo - No Brainer
+    1440649640, // Tyga - Rack City
+    170439491, // Nas - Hate me now
+    1440841853, // 50 Cent - Many Man
+    1384304787, // Tyga - taste
+    1440662034, // 2pac - I get around
+    1440763440, // 2pac - keep ya head up
+    1443258608, // Nas - Hero
+    254344786, // Run MDC - Peter Piper
+    1400124399, // Carters - Apeshit
+    1446040612, // Ofsset - Zeze
+    162508312, // Nas - I can 
+    1434770522, // Eminem - Venon 
+    468152597, // Tyler The Creator - Bastard
+    1271423854, // Gucci mane - I get the bag
+    1215753230, // Teo - Relax
+    281701724, // Fugees - Fu-gee-la
+    1444002929, // Iggy Azalea - Beg for it
+]
+
 module.exports = [
     /*
     266768597, // A trible Called Quest - Can I kick it?

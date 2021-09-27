@@ -73,7 +73,7 @@ app.get('/rank', async (req, res)=> {
      let html = `<h1> Top Song  </h1> <ul>`
      for (let i = 0; i < tracks.length; i ++){
       const inSecs = tracks[i][1]/1000;
-      html = html + '<li>' + tracks[i][0] + ' - ' + inSecs + '</li>';
+      html = html + '<li>' + tracks[i][0] + ' - ' + inSecs + ' - '+ tracks[i][2] + '</li>';
      }
       html = html + '</ul>';
       res.send (html);

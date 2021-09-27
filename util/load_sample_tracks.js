@@ -10,7 +10,7 @@ const rapIds = artistIds.rap;
 const rc = require('redis').createClient();
 const rockIds = artistIds.rock;
 
-const tracksIds = require('./tracksIds')
+const tracksIds = require('./tracksIds').sub
 
 let rooms = require('../config').rooms;
 let score;
@@ -40,7 +40,7 @@ const options = {
 
 const updateRooms = function(artistId) {
  
-rooms = ['igor2'];
+rooms = ['sub'];
 //rooms = ['mixed'];
   score = 0;
   /*
@@ -97,7 +97,7 @@ parser.on('data', function(track) {
   });
   */
  const _score = true ? songId : score;
- rc.zadd('rap4', 30000 , songId)
+ rc.zadd('sub', 30000 , songId)
   score++;
   songId++;
 });
