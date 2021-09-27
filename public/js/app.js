@@ -168,6 +168,7 @@
     $el.off('click').on('click', clearPrivate);
   };
 
+  
   // Add track info
   var addTrackInfo = function(data) {
     if ($touchplay) {
@@ -193,6 +194,7 @@
     }
 
     var html = [
+      '<span> user:'+ data.userBestScore + ' score: '+ data.bestScore + '</span>',
       '<li class="bordered">',
       '<img class="artwork" src="' + data.artworkUrl + '"/>',
       '<div class="info">',

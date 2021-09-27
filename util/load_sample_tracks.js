@@ -9,6 +9,9 @@ const popIds = artistIds.pop;
 const rapIds = artistIds.rap;
 const rc = require('redis').createClient();
 const rockIds = artistIds.rock;
+
+const tracksIds = require('./tracksIds')
+
 let rooms = require('../config').rooms;
 let score;
 let skip = 0; // Skip counter
@@ -18,12 +21,17 @@ const options = {
   headers: { 'content-type': 'application/json' },
   host: 'itunes.apple.com',
   // Look up multiple artists by their IDs and get `limit` songs for each one
+  /*
   path:
     '/lookup?id=' +
     popIds.concat(rapIds, rockIds).join() +
     '&entity=song&limit=' +
     limit,
   port: 80
+  */
+  path: '/lookup?id='+ tracksIds,
+  port:80
+
 };
 
 /**
@@ -31,8 +39,11 @@ const options = {
  */
 
 const updateRooms = function(artistId) {
-  rooms = ['mixed'];
+ 
+rooms = ['igor2'];
+//rooms = ['mixed'];
   score = 0;
+  /*
   if (artistId === popIds[0]) {
     rooms.push('hits', 'pop');
     // Set the skip counter (there is no need to update the rooms for the next pop artists)
@@ -43,10 +54,14 @@ const updateRooms = function(artistId) {
   } else {
     rooms.push('oldies', 'rock');
     skip = rockIds.length - 1;
-  }
+  } 
+  */
 };
 
 parser.on('data', function(track) {
+
+  console.log(track)
+  console.log ('chamado')
   if (track.wrapperType === 'artist') {
     if (skip) {
       skip--;
@@ -69,14 +84,20 @@ parser.on('data', function(track) {
     'artworkUrl60',
     track.artworkUrl60,
     'artworkUrl100',
-    track.artworkUrl100
+    track.artworkUrl100,
+    'bestScore',
+    30000,
+    'userBestScore',
+    'binb'
   );
-
+ /*
   rooms.forEach(function(room) {
     const _score = room === 'mixed' ? songId : score;
     rc.zadd(room, _score, songId);
   });
-
+  */
+ const _score = true ? songId : score;
+ rc.zadd('rap4', 30000 , songId)
   score++;
   songId++;
 });
