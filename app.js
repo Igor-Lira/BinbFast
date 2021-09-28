@@ -68,6 +68,8 @@ app.post('/resetpasswd', user.resetPasswd);
 app.get('/sliceleaderboard', user.sliceLeaderboard);
 app.get('/signup', site.validationErrors, site.signup);
 app.get('/rank', site.trackLeaderboard)
+
+/*
 app.get('/userrank', async (req, res)=> {
   const userTrack =  require('./lib/tracks').userTrackRank;
    await userTrack((err, tracks)=>{
@@ -75,7 +77,7 @@ app.get('/userrank', async (req, res)=> {
     res.send('route worked');
   })
 });
-
+*/
 /*
 app.get('/rank', async (req, res)=> {
   const getTracks =  require('./lib/tracks').trackRank;
@@ -92,6 +94,7 @@ app.post(
   user.createAccount
 );
 app.get('/:room', site.room);
+app.get('/user/:username/rank', user.tracksRanking)
 app.get('/user/:username', user.profile);
 
 app.use(errorHandler);

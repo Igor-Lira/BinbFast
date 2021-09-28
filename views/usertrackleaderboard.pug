@@ -1,14 +1,14 @@
 extends layout
 
 block title
-  title binb :: track Leaderboard 
+  title binb :: User track Leaderboard 
 
 
 block sections
   section
     .row
       .span7.offset1
-        .highscores High Scores
+        .highscores #{user} : High Scores
           .icons.img
   section
     .row
@@ -19,10 +19,8 @@ block sections
             tbody
               each user, i in tracks 
                 tr
-                  td 
-                    a(href=`/user/${tracks[i][2]}/rank`) #{tracks[i][2]}
-                  td #{tracks[i][1]}
                   td #{tracks[i][0]}
+                  td #{tracks[i][1]}
           .loading
             .loading-block
             .loading-block

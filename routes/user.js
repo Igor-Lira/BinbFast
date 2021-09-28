@@ -7,6 +7,7 @@ const mailer = require('../lib/email/mailer');
 const rooms = require('../config').rooms;
 const User = require('../lib/user');
 const utils = require('../lib/utils');
+const userTracks =  require('../lib/tracks').userTrackRank;
 
 /**
  * Populate the whitelist of follow-up URLs.
@@ -459,6 +460,26 @@ exports.resetPasswd = function(req, res, next) {
     res.redirect(req.url);
   });
 };
+
+/**
+ * Show user tracks ranking.
+ */
+
+ exports.tracksRanking = function (req, res, next) {
+  const key =  req.params.username + ':tracks';
+  db.exists([key], function(err, exists) {
+    if (err) {
+      return next(err);
+    }
+    if (exists) {
+        userTracks(req.params.username, (err, tracks)=>{
+        const tracksToRender = utils.buildLeaderboardsTracks(tracks);
+        res.render('usertrackleaderboard', {tracks: tracksToRender, user: req.params.username});
+      })
+    }
+  })
+}
+
 
 /**
  * Show user profile.
