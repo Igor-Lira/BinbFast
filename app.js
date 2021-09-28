@@ -68,6 +68,13 @@ app.post('/resetpasswd', user.resetPasswd);
 app.get('/sliceleaderboard', user.sliceLeaderboard);
 app.get('/signup', site.validationErrors, site.signup);
 app.get('/rank', site.trackLeaderboard)
+app.get('/userrank', async (req, res)=> {
+  const userTrack =  require('./lib/tracks').userTrackRank;
+   await userTrack((err, tracks)=>{
+     console.log (tracks);
+    res.send('route worked');
+  })
+});
 
 /*
 app.get('/rank', async (req, res)=> {
