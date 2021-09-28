@@ -473,7 +473,7 @@ exports.resetPasswd = function(req, res, next) {
     }
     if (exists) {
         userTracks(req.params.username, (err, tracks)=>{
-        const tracksToRender = utils.buildLeaderboardsTracks(tracks);
+        const tracksToRender = utils.buildLeaderboardsTracksForUsers(tracks);
         res.render('usertrackleaderboard', {tracks: tracksToRender, user: req.params.username});
       })
     }
