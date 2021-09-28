@@ -76,7 +76,7 @@ block sections
                 .control-group.error
                   label.control-label(for="captcha-input") Are you human?
                   .controls
-                    img#captcha(src=captchaurl)
+                    span #{captchaurl}
                     input#captcha-input(type="text", name="captcha",
                       maxlength="4")
                     span.help-inline #{errors.captcha}
@@ -84,7 +84,7 @@ block sections
                 .control-group
                   label.control-label(for="captcha-input") Are you human?
                   .controls
-                    img#captcha(src=captchaurl)
+                    span #{captchaurl}
                     input#captcha-input(type="text", name="captcha",
                       maxlength="4", placeholder="type what you see...")
             - else
@@ -106,7 +106,7 @@ block sections
               .control-group
                 label.control-label(for="captcha-input") Are you human?
                 .controls
-                  img#captcha(src=captchaurl)
+                  span #{captchaurl}
                   input#captcha-input(type="text", name="captcha",
                     maxlength="4", placeholder="type what you see...")
             button.submit-button.btn.btn-success(type="submit")

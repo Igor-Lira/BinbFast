@@ -91,7 +91,7 @@ exports.recoverPasswd = function(req, res) {
   const captcha = new Captcha();
   req.session.captchacode = captcha.getCode();
   res.render('recoverpasswd', {
-    captchaurl: captcha.toDataURL(),
+    //captchaurl: captcha.toDataURL(),
     followup: req.query.followup || '/',
     slogan: randomSlogan()
   });

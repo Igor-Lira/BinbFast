@@ -1,0 +1,33 @@
+extends layout
+
+block title
+  title binb :: track Leaderboard 
+
+
+block sections
+  section
+    .row
+      .span7.offset1
+        .highscores High Scores
+          .icons.img
+  section
+    .row
+      .span7.offset1.relative
+        h4 Tracks
+        .leaderboard-wrapper
+          table.table.table-striped.table-bordered.leaderboard
+            tbody
+              each user, i in tracks 
+                tr
+                  td #{tracks[i][2]}
+                  td #{tracks[i][1]}
+                  td #{tracks[i][0]}
+          .loading
+            .loading-block
+            .loading-block
+            .loading-block
+      .span7.relative
+
+block scripts
+  script(src="//cdn.jsdelivr.net/jquery/3/jquery.min.js")
+  script(src="/static/js/leaderboards.min.js")
