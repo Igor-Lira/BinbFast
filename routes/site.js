@@ -8,6 +8,19 @@ const parallel = require('async/parallel');
 const randInt = require('../lib/prng').randInt;
 const randomSlogan = require('../lib/utils').randomSlogan;
 const rooms = require('../lib/rooms').rooms;
+const getTracks =  require('../lib/tracks').trackRank;
+const utils = require('../lib/utils');
+
+/**
+ * Generate Leaderboard by tracks
+ */
+
+exports.trackLeaderboard = function (req, res) {
+    getTracks((err, tracks)=>{
+       const tracksToRender = utils.buildLeaderboardsTracks(tracks);
+       res.render('trackleaderboard', {tracks: tracksToRender});
+    })
+}
 
 /**
  * Generate a sub-task.

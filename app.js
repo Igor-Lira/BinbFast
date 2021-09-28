@@ -67,18 +67,16 @@ app.get('/resetpasswd', site.validationErrors, site.resetPasswd);
 app.post('/resetpasswd', user.resetPasswd);
 app.get('/sliceleaderboard', user.sliceLeaderboard);
 app.get('/signup', site.validationErrors, site.signup);
+app.get('/rank', site.trackLeaderboard)
+
+/*
 app.get('/rank', async (req, res)=> {
   const getTracks =  require('./lib/tracks').trackRank;
-   await getTracks((err, tracks)=>{
-     let html = `<h1> Top Song  </h1> <ul>`
-     for (let i = 0; i < tracks.length; i ++){
-      const inSecs = tracks[i][1]/1000;
-      html = html + '<li>' + tracks[i][0] + ' - ' + inSecs + ' - '+ tracks[i][2] + '</li>';
-     }
-      html = html + '</ul>';
-      res.send (html);
-   });
-})
+  // await getTracks((err, tracks)=>{
+    res.render('rankTrack')
+//})
+});
+*/
 app.post(
   '/signup',
   user.validateSignUp,

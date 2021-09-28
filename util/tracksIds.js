@@ -33,7 +33,7 @@ module.exports.sub = [
     1444002929, // Iggy Azalea - Beg for it
 ]
 
-module.exports = [
+module.exports.all = [
     /*
     266768597, // A trible Called Quest - Can I kick it?
     1440726301, // Common - Be (Intro)
