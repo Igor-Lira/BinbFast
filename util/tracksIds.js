@@ -1,4 +1,114 @@
+module.exports.rap = [
+    1440726301, // Common - Be (Intro)
+    1455130481, // 2pac - runnin
+    1530984391, // Lazy Jay - 212
+    970861802, // Mike G - Loaded
+    281812954, // Run DMC - Rock box
+  /*
+    1455130481, //Runnin'
+    42332589, //Defeat
+    1215753230, //Rolex
+    1468497504, //The Format
+    1440726301, //Be
+    1440726307, //Go!
+    1426106382, //212
+    1440724395, //How Come
+    1440822584, //Slippin'
+    1445287703, //Kush
+    1443089662, //Forever
+    1444221673, //8 Mile
+    1452852699, //Mosh
+    1253102618, //PIE
+    1444081641, //Da Joint
+    1039459662, //My Way
+    700583558, //Stylo
+    306681909, //Tipsy
+    1445169364, //Mercy
+    1440848101, //Otis
+    1446040612, //ZEZE
+    1204246290, //iSpy
+    198110432, //Ante Up
+    887699514, //Raid
+    1440982375, //A?Yo
+    1440926306, //YOU
+    1192538686, //T-Shirt
+    672398798, //Versace
+    1445021082, //23
+    1443258608, //Hero
+    273250690, //I Can
+    868691274, //Ether
+    1035135670, //Oh No
+    1436734718, //Nasty
+    1440851763, //Only
+    1440909785, //Fly
+    1440911272, //Slam
+    1581714322, //ATLiens
+    255837382, //BOB
+    1444891259, //Body
+    426327011, //I Wish
+    1443088420, //My Life
+    1440915354, //Drop
+    1440649635, //Faded
+    268523040, //One Day
+    1222709141, //MY PYT
+    777834026, //Rosana
+    209743950, //"x"
+    1418058530, //BIG BANK
+    1561876303, //My Nigga
+    1445881454, //Senile
+    1308645368, //Him & I
+    518748324, //So Good
+    1440737328, //Got Money
+    1288207313, //Brand Nubian
+    1400124399, //APESHIT
+    481488008, //Peso
+    1440862984, //Survival
+    1440863085, //Berzerk
+    1440858211, //Molly
+    1440841390, //Too Good
+    1311935270, //Lemon
+    1453941332, //Clout
+    1436081092, //Venom
+    1470480678, //Lalala
+    1446626448, //No Love
+    1418026017, //No Brainer
+    1440849363, //Let You Down
+    1440737328, //Got Money
+    269843734, //CREAM
+    1444151157, //The Don
+    662324544, //One Love
+    868691292, //One Mic
+    1370520522, //Loaded
+    1443160570, //Monster
+    1440830079, //Clique
+    1288118754, //Come Baby Come
+    1440864098, //Rap God
+    1440662208, //Dear Mama
+    1440763964, //Hair Mary
+    158038407, //Hey Now
+    1440649640, //Rack City
+    1442868278, //BYS
+    723352119, //Work
+    1215426433, //Crew
+    1440726408, //Love Is
+    1440726404, //Testify
+    1440726412, //The Food
+    1440720538, //The Light
+    211507693, //The Message
+    170439594, //Nas Is Like
+    170439491, //Hate Me Now
+    1444214364, //UMI Says
+    1444151166, //Cherry Wine
+    1444117947, //Party Up
+*/
+]
 module.exports.sub = [
+    1440726301, // Common - Be (Intro)
+    1455130481, // 2pac - runnin
+    1530984391, // Lazy Jay - 212
+    970861802, // Mike G - Loaded
+    281812954, // Run DMC - Rock box
+    /*
     1440726301, // Common - Be (Intro)
     1455130481, // 2pac - runnin
     1530984391, // Lazy Jay - 212
@@ -31,6 +141,7 @@ module.exports.sub = [
     1215753230, // Teo - Relax
     281701724, // Fugees - Fu-gee-la
     1444002929, // Iggy Azalea - Beg for it
+    */
 ]
 
 module.exports.all = [

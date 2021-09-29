@@ -1,34 +1,21 @@
 'use strict';
+const ROOM_NAME = 'rap'
+const tracksIds = require('./tracksIds').rap
 
-const artistIds = require('./artist-ids');
+
 const http = require('http');
 const JSONStream = require('JSONStream');
-const limit = 7; // The number of songs to retrieve for each artist
 const parser = JSONStream.parse(['results', true]);
-const popIds = artistIds.pop;
-const rapIds = artistIds.rap;
-const rc = require('redis').createClient();
-const rockIds = artistIds.rock;
+const rc = require('../lib/redis-clients').songs;
 
-const tracksIds = require('./tracksIds').sub
 
 let rooms = require('../config').rooms;
-let score;
 let skip = 0; // Skip counter
-let songId = 0;
+
 
 const options = {
   headers: { 'content-type': 'application/json' },
   host: 'itunes.apple.com',
-  // Look up multiple artists by their IDs and get `limit` songs for each one
-  /*
-  path:
-    '/lookup?id=' +
-    popIds.concat(rapIds, rockIds).join() +
-    '&entity=song&limit=' +
-    limit,
-  port: 80
-  */
   path: '/lookup?id='+ tracksIds,
   port:80
 
@@ -40,9 +27,8 @@ const options = {
 
 const updateRooms = function(artistId) {
  
-rooms = ['sub'];
+rooms = [ROOM_NAME];
 //rooms = ['mixed'];
-  score = 0;
   /*
   if (artistId === popIds[0]) {
     rooms.push('hits', 'pop');
@@ -59,9 +45,6 @@ rooms = ['sub'];
 };
 
 parser.on('data', function(track) {
-
-  console.log(track)
-  console.log ('chamado')
   if (track.wrapperType === 'artist') {
     if (skip) {
       skip--;
@@ -72,7 +55,7 @@ parser.on('data', function(track) {
   }
 
   rc.hmset(
-    'song:' + songId,
+    'song:' + track.trackId,
     'artistName',
     track.artistName,
     'trackName',
@@ -96,10 +79,19 @@ parser.on('data', function(track) {
     rc.zadd(room, _score, songId);
   });
   */
- const _score = true ? songId : score;
- rc.zadd('sub', 30000 , songId)
-  score++;
-  songId++;
+
+  //Make sure to always update mixed
+  // but avoid to lost scores 
+  rc.zscore (['mixed', track.trackId], (err, result) => {
+    console.log (result)
+    if (!result){
+      console.log ('entrei')
+      rc.zadd('mixed', 30000 , track.trackId);
+      rc.zadd(ROOM_NAME, 30000 , track.trackId);
+    }
+  })
+ // rc.zadd(ROOM_NAME, 30000 , track.trackId);
+
 });
 
 parser.on('end', function() {
@@ -107,6 +99,11 @@ parser.on('end', function() {
   process.stdout.write('OK\n');
 });
 
+process.stdout.write('Loading sample tracks... ');
+http.get(options, function(res) {
+  res.pipe(parser);
+});
+/*
 rc.del(rooms, function(err) {
   if (err) {
     throw err;
@@ -116,3 +113,4 @@ rc.del(rooms, function(err) {
     res.pipe(parser);
   });
 });
+*/
