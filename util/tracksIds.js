@@ -126,7 +126,26 @@ module.exports.shortest = [
     1444002929, // Iggy Azalea - Beg for it
     1452852699, // Emimenm - Mosh
 ]
-
+module.exports.forro = [
+    735127735, // Tropykalia - Aonde está você
+    431250037, // Forro anjo azul - Meu anjo azul 
+    805420937, // Calcinha Preta - Hoje à noite "alone"
+    1561431958, // Libanos - Brigas
+    1504105137, // Limão com Mel - Asas Partidas 
+    822908601, // Limão com mel - salve o nosso amor
+    1470008720, // Baby som - Meu grande amor
+    805420938, // Calcinha preta - Louca por ti
+    317258610, //  Bonde do Forró - Na hora de amar
+    912026585, // Desejo de menina - coração 
+    731873409, // Tropykalia - dois em um 
+    987676839, // Desejo de menina - Deixa eu te amar 
+    912025216, // Desejo de menina - somos um só 
+    1542007071, // Noda de Caju - Sem você
+    324252038, // Limão com Mel - Não pensou 
+    1480543128, // Calcinha preta - Te amo carrie
+    1499396451, // Balancear - A chuva cai 
+    1497595394, // Líbanos - Sementes do amor
+]
 module.exports.all = [
     /*
     266768597, // A trible Called Quest - Can I kick it?
