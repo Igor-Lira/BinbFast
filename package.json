@@ -9,7 +9,8 @@
   "license": "MIT",
   "scripts": {
     "minify": "for f in $(ls public/js/* | grep -v '\\.min\\.js$'); do uglifyjs $f -cm -o ${f%.js}.min.js; done",
-    "import-data": "node util/load_sample_tracks.js",
+    "import-data": "node util/load_sample_new.js",
+    "import-new": "node util/load_sample_tracks.js",
     "start": "node app.js"
   },
   "engines": {

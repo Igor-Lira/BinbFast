@@ -1,31 +1,22 @@
 'use strict';
 
-const ROOM_NAME = 'brasil'
+const ROOM_NAME = 'rap'
 const tracksIds = require('./tracksIds')[ROOM_NAME]
 
 const http = require('http');
 const JSONStream = require('JSONStream');
 const parser = JSONStream.parse(['results', true]);
 const rc = require('../lib/redis-clients').songs;
-const artistIds = require('./artist-ids');
-const brazilianTracks = artistIds.brazilian;
-const limit = 7;
 
 const options = {
   headers: { 'content-type': 'application/json' },
   host: 'itunes.apple.com',
-  path: 
-  '/lookup?id=' +
-  brazilianTracks +
-  '&entity=song&limit=' +
-  limit,
+  path: '/lookup?id='+ tracksIds,
   port:80
+
 };
 
 parser.on('data', async function(track) {
-  if (track.wrapperType === 'artist') {
-    return;
-  }
   console.log (track);
     rc.exists(`song:${track.trackId}`, async (err, res) => {
     if (!res){

@@ -5,31 +5,29 @@
  */
 
 module.exports = {
-  pop: [
-    262836961, // ADELE
-    459885, // Avril Lavigne
-    1419227, // Beyoncé
-    217005, // Britney Spears
-    64387566, // Katy Perry
-    277293880, // Lady GaGa
-    184932871 // MIKA
-  ],
-  rap: [
-    1587965, // A Tribe Called Quest
-    1971863, // Beastie Boys
-    465802, // Cypress Hill
-    384304, // EPMD
-    289550, // OutKast
-    13503763, // Swollen Members
-    43680 // The Roots
-  ],
-  rock: [
-    5040714, // AC/DC
-    462006, // Bob Dylan
-    994656, // Led Zeppelin
-    3296287, // Queen
-    562555, // The Beach Boys
-    136975, // The Beatles
-    62819 // The Jimi Hendrix Experience
+  brazilian: [
+    6931097, // Ivete Sangalo
+    6931042, // Tim Maia
+    117440, // Gilberto Gil
+    10591, // Chico Buarque
+    73234871, // Raul Seixas 
+    26496483, // Cartola
+    83339590, // Alceu Valença
+    92451897, // Charlie Brown
+    71466902, // Cazuza
+    261395084, // Legião Urbana
+    6710846, // Rita Lee
+    90233463, // Mamonas Assassinas
+    597214610, // Anitta
+    81857521, // Titãs
+    10416, // djvan
+    90365212, // Capital Inicial
+    32316742, // Paralamas do Suceso
+    83339580, // Cássia Eller
+    25510927, // Seu Jorge
+    411496961, // Revelação
+    205151315, // Raça Negra
+    36399, // Roupa Nova
+    193507664 // Thiaguinho
   ]
 };
