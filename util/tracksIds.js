@@ -146,6 +146,206 @@ module.exports.forro = [
     1499396451, // Balancear - A chuva cai 
     1497595394, // Líbanos - Sementes do amor
 ]
+
+module.exports.hits = [
+    275591369, //Low
+1440866795, //Stan
+975443020, //Lean On
+1457882148, //SOS
+726416473, //Song 2
+1440746199, //Mercy
+1440901513, //River
+1383852262, //Rise
+1440818672, //Team
+1440729871, //One
+386153478, //Yeah!
+1440764593, //Changes
+1432624785, //Flames
+1440636710, //Loser
+1440724391, //My Band
+737053283, //Timber
+1440859014, //Heroes
+1369439270, //Mine
+83371738, //Vogue
+1384304787, //Taste
+924568978, //Bad
+300206617, //Boom
+923691591, //Omg
+545398138, //Try
+300206615, //Alive
+400946439, //My Love
+1542849666, //Naive
+920685996, //Loyal
+1447538403, //Leave
+386153641, //Burn
+264720124, //Kids
+1440842654, //King
+1440891551, //Vertigo
+30475358, //Crazy
+692624266, //Lady
+1544494392, //Hello
+1440934019, //Work
+1448420600, //Numb
+293395859, //Sober
+1473307010, //China
+1445043157, //Stay
+408922516, //More
+1452840696, //Rain
+1050203620, //Roses
+992088660, //Bliss
+1093157662, //Stay
+387681167, //Stay
+1458138151, //Sing
+273714669, //Atwa
+1448420463, //Scream
+326644034, //Replay
+1549725351, //Angel
+947688607, //Snow
+1440905826, //Malibu
+1440866685, //Rihanna
+1440727892, //Closer
+971238815, //GDFR
+699610410, //Tender
+187472354, //BYOB
+933984085, //Fun
+1440818664, //Royals
+386153729, //My Boo
+1440808168, //S&M
+881629103, //Rude
+1397556695, //Ocean
+1443624297, //Lonely
+1437920364, //Calma
+939779732, //7/11
+888878524, //Loca
+1440783502, //So Sick
+340234702, //Gypsy
+1369380479, //Lovely
+1369380479, //Titanium
+545398137, //Blow Me
+281430765, //Roses
+250164679, //Deja Vu
+211424460, //Life
+1440864350, //Human
+1440907563, //PIMP
+813869552, //Classic
+308094306, //Fuck It
+73273491, //Believe
+1565598345, //Levels
+1440861976, //Clarity
+299861245, //Shine On
+399891696, //Trouble
+1170699703, //Closer
+1440770466, //Dilemma
+1441154568, //Rehab
+296016893, //Halo
+293395858, //So What
+1440790544, //Mmmbop
+302992638, //Goodies
+566322365, //Skyfall
+850571388, //Dare
+948349340, //Dare
+887608467, //Changes
+187454421, //Drive
+693290739, //She Wolf
+1417177313, //Stay
+80815173, //Music
+563015717, //Madness
+339972792, //TiK ToK
+91990183, //Sorry
+1440718660, //My Oh My
+613867347, //Wild Ones
+1441657635, //Sky
+1472026722, //Ride It
+1540123623, //The Seed
+1440764114, //Big Girl
+1438078577, //Drive By
+309066884, //No Scrubs
+868199261, //Shower
+991509754, //Uprising
+952683, //Madonna
+157465470, //Pony
+1123076827, //Talk
+1440842752, //Maps
+1445151352, //Gentlemen
+1574426608, //ET
+1440871420, //Starboy
+275025196, //Informer
+281701724, //FuGeeLa
+368017285, //Airplanes
+1233869916, //Feels
+265816505, //Smooth
+1515990544, //RITMO
+1483982500, //X
+1443121533, //Like a G6
+273714765, //Aerials
+1440775747, //Te Amo
+887608464, //Waves
+1469586252, //Bad Girls
+829909824, //Magic
+1440855562, //Sugar
+613867353, //I Cry
+523756160, //Tacata
+303084814, //Trick Me
+1488136754, //Rich Girl
+1440808354, //Price Tag
+1529212009, //Beggin'
+440471936, //Cinema
+1228739604, //IDGAF
+1440661545, //Baby
+1440841384, //One Dance
+1440742169, //Right Now
+1570515851, //Fast Car
+1449106558, //Con Calma
+1436781869, //Taki Taki
+1471695442, //Latch
+726416468, //Beetlebum
+1451142321, //Good Life
+1440829541, //The Days
+1443231196, //Middle
+1440642738, //Take Care
+96216872, //Only Time
+267264869, //Kiss Kiss
+278683767, //Pink
+1223076389, //Lost On You
+1440913824, //Crazy
+1440852749, //Hideaway
+1093157655, //Firestone
+425465319, //Alive
+1580077236, //Thank You
+1440903547, //Business
+1443231311, //Hot-N-Fun
+592364996, //Die Young
+275018555, //Milkshake
+1440894921, //This Girl
+1097862231, //Creep
+1396477176, //No Lie
+1443623988, //Locked Up
+835164917, //Jubel
+1234665569, //Chantaje
+1440855977, //Misery
+1234278479, //OK
+300974587, //I Swear
+882945383, //Chandelier
+1423285054, //Always
+1122782283, //Yellow
+1440809113, //Domino
+281430764, //Hey Ya!
+1253106277, //Mask Off
+1440799199, //How We Do
+888878526, //Rabiosa
+270246724, //Waterfalls
+1122776156, //Clocks
+1440771250, //Sonne
+273714713, //Toxicity
+157507006, //I Try
+850576709, //19-2000
+1447204033, //Wow
+693290786, //Play Hard
+486040194, //Some Nights
+1517447333, //Wonderwall
+1440649181, //Smack That
+
+]
 module.exports.all = [
     /*
     266768597, // A trible Called Quest - Can I kick it?
