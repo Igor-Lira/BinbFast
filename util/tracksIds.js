@@ -1,10 +1,5 @@
 module.exports.rap = [
-    1440726301, // Common - Be (Intro)
-    1455130481, // 2pac - runnin
-    1530984391, // Lazy Jay - 212
-    970861802, // Mike G - Loaded
-    281812954, // Run DMC - Rock box
-  /*
+
     1455130481, //Runnin'
     42332589, //Defeat
     1215753230, //Rolex
@@ -100,15 +95,9 @@ module.exports.rap = [
     1444214364, //UMI Says
     1444151166, //Cherry Wine
     1444117947, //Party Up
-*/
 ]
 module.exports.sub = [
-    1440726301, // Common - Be (Intro)
-    1455130481, // 2pac - runnin
-    1530984391, // Lazy Jay - 212
-    970861802, // Mike G - Loaded
-    281812954, // Run DMC - Rock box
-    /*
+
     1440726301, // Common - Be (Intro)
     1455130481, // 2pac - runnin
     1530984391, // Lazy Jay - 212
@@ -141,7 +130,6 @@ module.exports.sub = [
     1215753230, // Teo - Relax
     281701724, // Fugees - Fu-gee-la
     1444002929, // Iggy Azalea - Beg for it
-    */
 ]
 
 module.exports.all = [

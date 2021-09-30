@@ -16,9 +16,9 @@ const utils = require('../lib/utils');
  */
 
 exports.trackLeaderboard = function (req, res) {
-    getTracks((err, tracks)=>{
+    getTracks(req.params.room, (err, tracks)=>{
        const tracksToRender = utils.buildLeaderboardsTracks(tracks);
-       res.render('trackleaderboard', {tracks: tracksToRender});
+       res.render('trackleaderboard', {rooms:config.rooms, roomrequested: req.params.room, tracks: tracksToRender});
     })
 }
 

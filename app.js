@@ -67,7 +67,7 @@ app.get('/resetpasswd', site.validationErrors, site.resetPasswd);
 app.post('/resetpasswd', user.resetPasswd);
 app.get('/sliceleaderboard', user.sliceLeaderboard);
 app.get('/signup', site.validationErrors, site.signup);
-app.get('/rank', site.trackLeaderboard)
+app.get('/rank/:room', site.trackLeaderboard)
 
 /*
 app.get('/userrank', async (req, res)=> {

@@ -1,6 +1,6 @@
 {
   "gameswithnorepeats": 1,
   "port": 8138,
-  "rooms" : ["rap"],
+  "rooms" : ["rap", "sub", "mixed"],
   "songsinarun": 5
 }
