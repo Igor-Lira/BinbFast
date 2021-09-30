@@ -96,7 +96,7 @@ module.exports.rap = [
     1444151166, //Cherry Wine
     1444117947, //Party Up
 ]
-module.exports.sub = [
+module.exports.shortest = [
 
     1440726301, // Common - Be (Intro)
     1455130481, // 2pac - runnin
