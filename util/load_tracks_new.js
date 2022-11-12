@@ -1,6 +1,6 @@
 'use strict';
 
-const ROOM_NAME = 'forro'
+const ROOM_NAME = 'shortest'
 const tracksIds = require('./tracksIds')[ROOM_NAME]
 
 const http = require('http');
@@ -13,11 +13,10 @@ const options = {
   host: 'itunes.apple.com',
   path: '/lookup?id='+ tracksIds,
   port:80
-
 };
 
 parser.on('data', async function(track) {
-  console.log (track);
+  console.log ('adding track: ' + track.trackName + ' ...');
     rc.exists(`song:${track.trackId}`, async (err, res) => {
     if (!res){
        rc.hmset(
@@ -39,22 +38,15 @@ parser.on('data', async function(track) {
         'userBestScore',
         'binb'
       );
-       rc.zadd('mixed', 30000 , track.trackId);
     } 
   });
   rc.zscore([ROOM_NAME,  track.trackId], (err, res) => {
     if (!res){
-      rc.zadd(ROOM_NAME, 30000 , track.trackId);
+      rc.zadd(ROOM_NAME, 30000, track.trackId);
     }
   })
 });
 
-/*
-parser.on('end', function() {
-  rc.quit();
-  process.stdout.write('OK\n');
-});
-*/
 process.stdout.write('Loading sample tracks... ');
 http.get(options, function(res) {
   res.pipe(parser);
