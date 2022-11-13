@@ -1,7 +1,7 @@
 {
   "gameswithnorepeats": 1,
   "port": 8138,
-  "rooms" : ["shortest"],
+  "rooms" : ["hits"],
   "songsinarun": 15,
-  "songduration": 20
+  "songduration": 5
 }
