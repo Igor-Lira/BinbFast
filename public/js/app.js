@@ -194,7 +194,6 @@
     }
 
     var html = [
-      '<span> user:'+ data.userBestScore + ' score: '+ data.bestScore + '</span>',
       '<li class="bordered">',
       '<img class="artwork" src="' + data.artworkUrl + '"/>',
       '<div class="info">',
