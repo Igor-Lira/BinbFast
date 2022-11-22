@@ -466,17 +466,16 @@ exports.resetPasswd = function(req, res, next) {
  */
 
  exports.tracksRanking = function (req, res, next) {
-  const key =  req.params.username + ':tracks';
+  const roomrequested = req.params.room;
+  const key =  req.params.username + ':tracks:' + roomrequested;
   db.exists([key], function(err, exists) {
-    if (err) {
-      return next(err);
-    }
-    if (exists) {
-        userTracks(req.params.username, (err, tracks)=>{
-        const tracksToRender = utils.buildLeaderboardsTracksForUsers(tracks);
-        res.render('usertrackleaderboard', {tracks: tracksToRender, user: req.params.username});
-      })
-    }
+      if (err) {
+        return next(err);
+      }
+      userTracks(roomrequested, req.params.username, (err, tracks)=>{
+      const tracksToRender = utils.buildLeaderboardsTracksForUsers(tracks);
+      res.render('usertrackleaderboard', {rooms, roomrequested, tracks: tracksToRender, user: req.params.username});
+    })
   })
 }
 

@@ -13,14 +13,21 @@ block sections
   section
     .row
       .span7.offset1.relative
+        h3  Tracks - #{roomrequested} 
+        h4
+          br
+          | 
+          each room, i in rooms
+            a(href=`/user/${user}/rank/${room}`) #{room}   
+            b &nbsp
         h4 Tracks
         .leaderboard-wrapper
           table.table.table-striped.table-bordered.leaderboard
             tbody
               each user, i in tracks 
                 tr
-                  td #{tracks[i][0]}
                   td #{tracks[i][1]}
+                  td #{tracks[i][0]}
           .loading
             .loading-block
             .loading-block

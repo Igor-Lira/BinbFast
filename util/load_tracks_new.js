@@ -1,6 +1,6 @@
 'use strict';
 
-const ROOM_NAME = 'rock'
+const ROOM_NAME = 'rap'
 const tracksIds = require('./tracksIds')[ROOM_NAME]
 
 const http = require('http');

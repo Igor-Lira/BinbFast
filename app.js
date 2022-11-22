@@ -94,7 +94,7 @@ app.post(
   user.createAccount
 );
 app.get('/:room', site.room);
-app.get('/user/:username/rank', user.tracksRanking)
+app.get('/user/:username/rank/:room', user.tracksRanking)
 app.get('/user/:username', user.profile);
 
 app.use(errorHandler);
